@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADD04DD6-8155-411B-86B1-711A01AF6C02}</ProjectGuid>
+    <ProjectGuid>{C95F32AC-FEC0-4072-9171-866B11FD52DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>KutuphaneOtomasyonu</RootNamespace>
     <AssemblyName>KutuphaneOtomasyonu</AssemblyName>
@@ -54,9 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
