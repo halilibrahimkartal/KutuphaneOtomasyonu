@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace KutuphaneOtomasyonu
 {
-    public partial class GirisEkrani : Form
+    public partial class AnaEkran : Form
     {
-        public GirisEkrani()
+        public AnaEkran()
         {
             InitializeComponent();
         }
