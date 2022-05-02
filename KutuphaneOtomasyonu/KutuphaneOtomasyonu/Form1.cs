@@ -16,5 +16,33 @@ namespace KutuphaneOtomasyonu
         {
             InitializeComponent();
         }
+
+        private void buttonGirisYap_Click(object sender, EventArgs e)
+        {
+            string kullaniciAdi = kullaniciAdiTextBox.Text;
+            string sifre = sifreTextBox.Text;
+
+            if (kullaniciAdi.Equals("admin") && sifre.Equals("123"))
+            {
+                AnaEkran giris = new AnaEkran();
+                giris.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı tekrardan deneyin !");
+                    
+            }
+    
+        }
+
+        private void girisYapmadanDevamEtButonu_Click(object sender, EventArgs e)
+        {
+            AnaEkran giris = new AnaEkran();
+            giris.Show();
+            this.Hide();
+            
+        }
     }
 }
