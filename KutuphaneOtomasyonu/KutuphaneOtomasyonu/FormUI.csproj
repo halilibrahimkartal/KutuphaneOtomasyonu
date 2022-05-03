@@ -52,19 +52,55 @@
     <Compile Include="AnaEkran.Designer.cs">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Ayarlar\Ayarlar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Ayarlar\Ayarlar.Designer.cs">
+      <DependentUpon>Ayarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emanet İşlemleri\Emanetİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emanet İşlemleri\Emanetİslemleri.Designer.cs">
+      <DependentUpon>Emanetİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.Designer.cs">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kitap İşlemleri\Kitapİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitap İşlemleri\Kitapİslemleri.Designer.cs">
+      <DependentUpon>Kitapİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kurum Bilgileri\KurumBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kurum Bilgileri\KurumBilgileri.Designer.cs">
+      <DependentUpon>KurumBilgileri.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Üye İşlemleri\Uyeİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Üye İşlemleri\Uyeİslemleri.Designer.cs">
+      <DependentUpon>Uyeİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="İstatistik\İstatistik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="İstatistik\İstatistik.Designer.cs">
+      <DependentUpon>İstatistik.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AnaEkran.resx">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GirisEkrani.resx">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +111,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Üye İşlemleri\Uyeİslemleri.resx">
+      <DependentUpon>Uyeİslemleri.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,5 +127,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
