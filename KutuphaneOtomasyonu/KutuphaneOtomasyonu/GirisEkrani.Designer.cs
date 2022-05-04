@@ -46,10 +46,9 @@ namespace KutuphaneOtomasyonu
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.kullaniciAdi.AutoSize = true;
-            this.kullaniciAdi.Location = new System.Drawing.Point(94, 288);
-            this.kullaniciAdi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.kullaniciAdi.Location = new System.Drawing.Point(125, 354);
             this.kullaniciAdi.Name = "kullaniciAdi";
-            this.kullaniciAdi.Size = new System.Drawing.Size(77, 15);
+            this.kullaniciAdi.Size = new System.Drawing.Size(88, 17);
             this.kullaniciAdi.TabIndex = 0;
             this.kullaniciAdi.Text = "Kullanıcı Adı:";
             // 
@@ -59,10 +58,9 @@ namespace KutuphaneOtomasyonu
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sifre.AutoSize = true;
-            this.sifre.Location = new System.Drawing.Point(136, 319);
-            this.sifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sifre.Location = new System.Drawing.Point(181, 393);
             this.sifre.Name = "sifre";
-            this.sifre.Size = new System.Drawing.Size(35, 15);
+            this.sifre.Size = new System.Drawing.Size(41, 17);
             this.sifre.TabIndex = 1;
             this.sifre.Text = "Şifre:";
             // 
@@ -71,10 +69,10 @@ namespace KutuphaneOtomasyonu
             this.kullaniciAdiTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.kullaniciAdiTextBox.Location = new System.Drawing.Point(170, 285);
-            this.kullaniciAdiTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kullaniciAdiTextBox.Location = new System.Drawing.Point(227, 351);
+            this.kullaniciAdiTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kullaniciAdiTextBox.Name = "kullaniciAdiTextBox";
-            this.kullaniciAdiTextBox.Size = new System.Drawing.Size(117, 20);
+            this.kullaniciAdiTextBox.Size = new System.Drawing.Size(155, 22);
             this.kullaniciAdiTextBox.TabIndex = 3;
             // 
             // sifreTextBox
@@ -83,10 +81,10 @@ namespace KutuphaneOtomasyonu
             this.sifreTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sifreTextBox.Location = new System.Drawing.Point(170, 317);
-            this.sifreTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sifreTextBox.Location = new System.Drawing.Point(227, 390);
+            this.sifreTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sifreTextBox.Name = "sifreTextBox";
-            this.sifreTextBox.Size = new System.Drawing.Size(117, 20);
+            this.sifreTextBox.Size = new System.Drawing.Size(155, 22);
             this.sifreTextBox.TabIndex = 4;
             // 
             // girisYapButonu
@@ -94,10 +92,10 @@ namespace KutuphaneOtomasyonu
             this.girisYapButonu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.girisYapButonu.Location = new System.Drawing.Point(192, 348);
-            this.girisYapButonu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.girisYapButonu.Location = new System.Drawing.Point(281, 428);
+            this.girisYapButonu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.girisYapButonu.Name = "girisYapButonu";
-            this.girisYapButonu.Size = new System.Drawing.Size(94, 37);
+            this.girisYapButonu.Size = new System.Drawing.Size(125, 46);
             this.girisYapButonu.TabIndex = 5;
             this.girisYapButonu.Text = "Giriş yap";
             this.girisYapButonu.UseVisualStyleBackColor = true;
@@ -109,10 +107,10 @@ namespace KutuphaneOtomasyonu
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(112, 69);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(149, 85);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(211, 192);
+            this.pictureBox1.Size = new System.Drawing.Size(192, 192);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -122,10 +120,10 @@ namespace KutuphaneOtomasyonu
             this.girisYapmadanDevamEtButonu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.girisYapmadanDevamEtButonu.Location = new System.Drawing.Point(95, 348);
-            this.girisYapmadanDevamEtButonu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.girisYapmadanDevamEtButonu.Location = new System.Drawing.Point(127, 428);
+            this.girisYapmadanDevamEtButonu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.girisYapmadanDevamEtButonu.Name = "girisYapmadanDevamEtButonu";
-            this.girisYapmadanDevamEtButonu.Size = new System.Drawing.Size(111, 37);
+            this.girisYapmadanDevamEtButonu.Size = new System.Drawing.Size(148, 46);
             this.girisYapmadanDevamEtButonu.TabIndex = 7;
             this.girisYapmadanDevamEtButonu.Text = "Giriş yapmadan devam et";
             this.girisYapmadanDevamEtButonu.UseVisualStyleBackColor = true;
@@ -133,10 +131,10 @@ namespace KutuphaneOtomasyonu
             // 
             // GirisEkrani
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(391, 470);
+            this.ClientSize = new System.Drawing.Size(521, 578);
             this.Controls.Add(this.girisYapmadanDevamEtButonu);
             this.Controls.Add(this.kullaniciAdi);
             this.Controls.Add(this.pictureBox1);
@@ -144,7 +142,7 @@ namespace KutuphaneOtomasyonu
             this.Controls.Add(this.sifreTextBox);
             this.Controls.Add(this.sifre);
             this.Controls.Add(this.kullaniciAdiTextBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GirisEkrani";
             this.Text = "Giriş Ekranı";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

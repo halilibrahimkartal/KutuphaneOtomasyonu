@@ -99,8 +99,17 @@
     <EmbeddedResource Include="AnaEkran.resx">
       <DependentUpon>AnaEkran.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ayarlar\Ayarlar.resx">
+      <DependentUpon>Ayarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emanet İşlemleri\Emanetİslemleri.resx">
+      <DependentUpon>Emanetİslemleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GirisEkrani.resx">
       <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitap İşlemleri\Kitapİslemleri.resx">
+      <DependentUpon>Kitapİslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
