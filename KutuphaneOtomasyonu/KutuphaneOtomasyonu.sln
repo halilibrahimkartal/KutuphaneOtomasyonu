@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.32407.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormUI", "KutuphaneOtomasyonu\FormUI.csproj", "{C95F32AC-FEC0-4072-9171-866B11FD52DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{44842E58-1F18-42CA-BEA6-7C13C9E99D99}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{DD932476-DDE9-4CA0-B72F-D24D45105FC0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{C95F32AC-FEC0-4072-9171-866B11FD52DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C95F32AC-FEC0-4072-9171-866B11FD52DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C95F32AC-FEC0-4072-9171-866B11FD52DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44842E58-1F18-42CA-BEA6-7C13C9E99D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44842E58-1F18-42CA-BEA6-7C13C9E99D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44842E58-1F18-42CA-BEA6-7C13C9E99D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44842E58-1F18-42CA-BEA6-7C13C9E99D99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD932476-DDE9-4CA0-B72F-D24D45105FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD932476-DDE9-4CA0-B72F-D24D45105FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD932476-DDE9-4CA0-B72F-D24D45105FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD932476-DDE9-4CA0-B72F-D24D45105FC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
