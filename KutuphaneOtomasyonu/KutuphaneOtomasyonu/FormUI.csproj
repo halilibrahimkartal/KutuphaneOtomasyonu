@@ -58,6 +58,7 @@
     <Compile Include="Ayarlar\Ayarlar.Designer.cs">
       <DependentUpon>Ayarlar.cs</DependentUpon>
     </Compile>
+    <Compile Include="da\Class1.cs" />
     <Compile Include="Emanet İşlemleri\Emanetİslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
