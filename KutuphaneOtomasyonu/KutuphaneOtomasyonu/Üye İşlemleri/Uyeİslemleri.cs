@@ -128,7 +128,7 @@ namespace KutuphaneOtomasyonu
         {
 
 
-            if (Uyetipi.SelectedItem == "Öğrenci")
+            if (Uyetipi.SelectedItem.ToString() == "Öğrenci")
             {
                 Ogrencino.Visible = true;
                 label9.Visible = true;
