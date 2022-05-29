@@ -34,6 +34,12 @@ namespace KutuphaneOtomasyonu
             }
 
         }
+
+        internal MySqlDataReader ExecuteReader(string query)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Close()
         {
             try

@@ -75,12 +75,16 @@ namespace KutuphaneOtomasyonu
             this.label1 = new System.Windows.Forms.Label();
             this.kitapadı = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kitaparama = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.kitaparama);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -503,6 +507,23 @@ namespace KutuphaneOtomasyonu
             this.dataGridView1.TabIndex = 32;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // kitaparama
+            // 
+            this.kitaparama.Location = new System.Drawing.Point(129, 259);
+            this.kitaparama.Name = "kitaparama";
+            this.kitaparama.Size = new System.Drawing.Size(155, 22);
+            this.kitaparama.TabIndex = 48;
+            this.kitaparama.TextChanged += new System.EventHandler(this.kitaparama_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(11, 262);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(112, 17);
+            this.label16.TabIndex = 49;
+            this.label16.Text = "Kitap Adı Giriniz:";
+            // 
             // Kitapİslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -568,5 +589,7 @@ namespace KutuphaneOtomasyonu
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox kitaparama;
     }
 }

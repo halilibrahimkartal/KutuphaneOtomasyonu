@@ -72,7 +72,7 @@ namespace KutuphaneOtomasyonu
             this.kullaniciAdiTextBox.Location = new System.Drawing.Point(227, 351);
             this.kullaniciAdiTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kullaniciAdiTextBox.Name = "kullaniciAdiTextBox";
-            this.kullaniciAdiTextBox.Size = new System.Drawing.Size(155, 22);
+            this.kullaniciAdiTextBox.Size = new System.Drawing.Size(148, 22);
             this.kullaniciAdiTextBox.TabIndex = 3;
             // 
             // sifreTextBox
@@ -84,7 +84,7 @@ namespace KutuphaneOtomasyonu
             this.sifreTextBox.Location = new System.Drawing.Point(227, 390);
             this.sifreTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sifreTextBox.Name = "sifreTextBox";
-            this.sifreTextBox.Size = new System.Drawing.Size(155, 22);
+            this.sifreTextBox.Size = new System.Drawing.Size(148, 22);
             this.sifreTextBox.TabIndex = 4;
             // 
             // girisYapButonu
@@ -95,7 +95,7 @@ namespace KutuphaneOtomasyonu
             this.girisYapButonu.Location = new System.Drawing.Point(281, 428);
             this.girisYapButonu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.girisYapButonu.Name = "girisYapButonu";
-            this.girisYapButonu.Size = new System.Drawing.Size(125, 46);
+            this.girisYapButonu.Size = new System.Drawing.Size(148, 46);
             this.girisYapButonu.TabIndex = 5;
             this.girisYapButonu.Text = "Giriş yap";
             this.girisYapButonu.UseVisualStyleBackColor = true;
@@ -145,6 +145,7 @@ namespace KutuphaneOtomasyonu
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GirisEkrani";
             this.Text = "Giriş Ekranı";
+            //this.Load += new System.EventHandler(this.GirisEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

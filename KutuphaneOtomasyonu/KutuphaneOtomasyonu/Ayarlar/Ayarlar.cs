@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace KutuphaneOtomasyonu
 {
@@ -15,6 +16,12 @@ namespace KutuphaneOtomasyonu
         public Ayarlar()
         {
             InitializeComponent();
+        }
+
+        private void Ayarlar_Load(object sender, EventArgs e)
+        {
+
+           
         }
     }
 }

@@ -172,5 +172,41 @@ namespace KutuphaneOtomasyonu
             dolapno.Text = dataGridView1.CurrentRow.Cells["DolapNo"].Value.ToString();
             rafno.Text = dataGridView1.CurrentRow.Cells["RafNo"].Value.ToString();
         }
+
+        private void kitaparama_TextChanged(object sender, EventArgs e)
+        {
+            db.Open();
+            var komut = db.Command();
+            komut.CommandText= "select *from Kitaplar where KitapAdi like '" + kitaparama.Text+"'";
+            MySqlDataReader read = komut.ExecuteReader();
+            
+      
+
+            while (read.Read()) {
+                Demirbasno.Text = read["Demirbasno"].ToString();
+                kitapID.Text = read["kitapId"].ToString();
+                ISBN.Text = read["ISBN"].ToString();
+                Barkod.Text = read["Barkod"].ToString();
+                kitapadı.Text = read["KitapAdi"].ToString();
+                yazarad.Text = read["YazarAd"].ToString();
+                yazarsoyad.Text = read["YazarSoyad"].ToString();
+                dil.Text = read["Dil"].ToString();
+                yayinevi.Text = read["Yayinevi"].ToString();
+                yayinyili.Text = read["YayinYili"].ToString();
+                cevirmenad.Text = read["CevirmenAd"].ToString();
+                cevirmensoyad.Text = read["CevirmenSoyad"].ToString();
+                sayfasayisi.Text = read["SayfaSayisi"].ToString();
+                adet.Text = read["Adet"].ToString();
+                baskiyili.Text = read["BaskiYili"].ToString();
+                baskino.Text = read["BaskiNo"].ToString();
+                kategori.Text = read["Kategori"].ToString();
+                kategorino.Text = read["KategoriId"].ToString();
+                dolapno.Text = read["DolapNo"].ToString();
+                rafno.Text = read["RafNo"].ToString();
+
+            }
+            read.Close();
+
+        }
     }
 }

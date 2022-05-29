@@ -49,7 +49,7 @@ namespace KutuphaneOtomasyonu
             this.Eposta = new System.Windows.Forms.TextBox();
             this.Telefon = new System.Windows.Forms.TextBox();
             this.Soyad = new System.Windows.Forms.TextBox();
-            this.kartID = new System.Windows.Forms.TextBox();
+            this.kartId = new System.Windows.Forms.TextBox();
             this.Ogrencino = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -233,12 +233,12 @@ namespace KutuphaneOtomasyonu
             this.Soyad.Size = new System.Drawing.Size(200, 22);
             this.Soyad.TabIndex = 23;
             // 
-            // kartID
+            // kartId
             // 
-            this.kartID.Location = new System.Drawing.Point(114, 59);
-            this.kartID.Name = "kartID";
-            this.kartID.Size = new System.Drawing.Size(200, 22);
-            this.kartID.TabIndex = 24;
+            this.kartId.Location = new System.Drawing.Point(114, 59);
+            this.kartId.Name = "kartId";
+            this.kartId.Size = new System.Drawing.Size(200, 22);
+            this.kartId.TabIndex = 24;
             // 
             // Ogrencino
             // 
@@ -300,7 +300,7 @@ namespace KutuphaneOtomasyonu
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.Ogrencino);
             this.panel1.Controls.Add(this.Ad);
-            this.panel1.Controls.Add(this.kartID);
+            this.panel1.Controls.Add(this.kartId);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Soyad);
             this.panel1.Controls.Add(this.label4);
@@ -374,7 +374,7 @@ namespace KutuphaneOtomasyonu
         private System.Windows.Forms.TextBox Eposta;
         private System.Windows.Forms.TextBox Telefon;
         private System.Windows.Forms.TextBox Soyad;
-        private System.Windows.Forms.TextBox kartID;
+        private System.Windows.Forms.TextBox kartId;
         private System.Windows.Forms.TextBox Ogrencino;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

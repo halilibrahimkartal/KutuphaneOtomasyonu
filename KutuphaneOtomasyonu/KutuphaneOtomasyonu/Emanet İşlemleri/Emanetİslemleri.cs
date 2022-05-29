@@ -14,6 +14,8 @@ namespace KutuphaneOtomasyonu
     public partial class Emanetİslemleri : Form
 
     {
+
+        
         private Database db = new Database();
         public Emanetİslemleri()
         {
@@ -25,7 +27,7 @@ namespace KutuphaneOtomasyonu
             dataGridView1.Visible = true;
 
             db.Open();
-            string command = @"select kartId,ISBN,AlisTarihi,TeslimTarihi
+            string command = @"select kartId,ISBN,AlisTarihi,TeslimTarihi,emanetId,KitapAdi
                  from Emanet";
             var adapter = db.Adapter(command);
             try
@@ -47,6 +49,8 @@ namespace KutuphaneOtomasyonu
         private void Emanetİslemleri_Load(object sender, EventArgs e)
         {
             dataGridView1.Visible = false;
+            emanetId.Visible = false;
+            KitapAdi.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,7 +59,7 @@ namespace KutuphaneOtomasyonu
             {
                 db.Open();
                 var komut = db.Command();
-                komut.CommandText = "insert into Emanet(ISBN,kartID,AlisTarihi,TeslimTarihi) values (@ISBN,@kartId,@AlisTarihi,@TeslimTarihi)";
+                komut.CommandText = "insert into Emanet(ISBN,kartID,EmanetId,KitapAdi,AlisTarihi,TeslimTarihi) values (@ISBN,@kartId,@EmanetId@KitapAdi@AlisTarihi,@TeslimTarihi)";
 
                 komut.Parameters.AddWithValue("@ISBN", ISBN.Text);
                 komut.Parameters.AddWithValue("@kartId", KartID.Text);
@@ -77,7 +81,7 @@ namespace KutuphaneOtomasyonu
             var komut = db.Command();
             try
             {
-                komut.CommandText = "update Emanet set kartID=@kartId,ISBN=@ISBN,AlisTarihi=@AlisTarihi,TeslimTarihi=@TeslimTarihi where kartId=@kartId";
+                komut.CommandText = "update Emanet set EmanetId=@EmanetId,KitapAdi=@KitapAdikartID=@kartId,ISBN=@ISBN,AlisTarihi=@AlisTarihi,TeslimTarihi=@TeslimTarihi where kartId=@kartId";
                 
                 komut.Parameters.AddWithValue("@kartId", KartID.Text);
                 komut.Parameters.AddWithValue("@ISBN", ISBN.Text);               
@@ -99,7 +103,10 @@ namespace KutuphaneOtomasyonu
         {
             KartID.Text = dataGridView1.CurrentRow.Cells["kartId"].Value.ToString();
             ISBN.Text = dataGridView1.CurrentRow.Cells["ISBN"].Value.ToString();
-            
+            emanetId.Text = dataGridView1.CurrentRow.Cells["emanetId"].Value.ToString();
+            KitapAdi.Text = dataGridView1.CurrentRow.Cells["KitapAdi"].Value.ToString();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)

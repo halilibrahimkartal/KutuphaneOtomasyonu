@@ -92,6 +92,7 @@
     <Compile Include="Kitap İşlemleri\Kitapİslemleri.Designer.cs">
       <DependentUpon>Kitapİslemleri.cs</DependentUpon>
     </Compile>
+    <Compile Include="kullaniciadi.cs" />
     <Compile Include="Kurum Bilgileri\KurumBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>

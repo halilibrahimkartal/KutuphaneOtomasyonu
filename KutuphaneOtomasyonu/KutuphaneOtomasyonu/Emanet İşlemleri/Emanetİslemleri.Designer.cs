@@ -43,12 +43,16 @@ namespace KutuphaneOtomasyonu
             this.KartID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.KitapAdi = new System.Windows.Forms.TextBox();
+            this.emanetId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.emanetId);
+            this.panel1.Controls.Add(this.KitapAdi);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -183,6 +187,20 @@ namespace KutuphaneOtomasyonu
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // KitapAdi
+            // 
+            this.KitapAdi.Location = new System.Drawing.Point(1303, 3);
+            this.KitapAdi.Name = "KitapAdi";
+            this.KitapAdi.Size = new System.Drawing.Size(10, 22);
+            this.KitapAdi.TabIndex = 12;
+            // 
+            // emanetId
+            // 
+            this.emanetId.Location = new System.Drawing.Point(1294, 3);
+            this.emanetId.Name = "emanetId";
+            this.emanetId.Size = new System.Drawing.Size(10, 22);
+            this.emanetId.TabIndex = 13;
+            // 
             // Emanetİslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,5 +234,7 @@ namespace KutuphaneOtomasyonu
         private System.Windows.Forms.TextBox KartID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox emanetId;
+        private System.Windows.Forms.TextBox KitapAdi;
     }
 }

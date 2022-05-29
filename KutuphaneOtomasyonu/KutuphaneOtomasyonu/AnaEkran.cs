@@ -23,6 +23,8 @@ namespace KutuphaneOtomasyonu
             KurumBilgileri kurumFormu = new KurumBilgileri();
             kurumFormu.MdiParent = this;
             kurumFormu.Show();
+           
+
         }
 
         private void uyeIslemleriButonu_Click(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace KutuphaneOtomasyonu
             Uyeİslemleri uyeFormu = new Uyeİslemleri();
             uyeFormu.MdiParent = this;
             uyeFormu.Show();
+            
         }
 
         private void emanetIslemleriButonu_Click(object sender, EventArgs e)
@@ -37,6 +40,8 @@ namespace KutuphaneOtomasyonu
             Emanetİslemleri emanetFormu = new Emanetİslemleri();
             emanetFormu.MdiParent = this;
             emanetFormu.Show();
+            
+
         }
 
         private void kitapIslemleriButonu_Click(object sender, EventArgs e)
@@ -44,6 +49,7 @@ namespace KutuphaneOtomasyonu
             Kitapİslemleri kitapFormu = new Kitapİslemleri();
             kitapFormu.MdiParent = this;
             kitapFormu.Show();
+            
         }
 
         private void istatistikButonu_Click(object sender, EventArgs e)
@@ -51,6 +57,7 @@ namespace KutuphaneOtomasyonu
             İstatistik istatistikFormu = new İstatistik();
             istatistikFormu.MdiParent = this;
             istatistikFormu.Show();
+            
         }
 
         private void ayarlarButonu_Click(object sender, EventArgs e)
@@ -58,6 +65,12 @@ namespace KutuphaneOtomasyonu
             Ayarlar ayarlarFormu = new Ayarlar();
             ayarlarFormu.MdiParent = this;
             ayarlarFormu.Show();
+            
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
 
         }
     }

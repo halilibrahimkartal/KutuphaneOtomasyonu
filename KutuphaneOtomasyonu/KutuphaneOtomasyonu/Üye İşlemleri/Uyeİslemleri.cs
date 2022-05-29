@@ -14,6 +14,7 @@ namespace KutuphaneOtomasyonu
     public partial class Uyeİslemleri : Form
     {
         private Database db = new Database();
+
         public Uyeİslemleri()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace KutuphaneOtomasyonu
                 komut.CommandText = "insert into Uye(Uyetipi,kartId,Ad,Soyad,OgrenciNo,OkulAdi,BolumAdi,Eposta,Telefon,KayitTarih,AyrilisTarih) values (@Uyetipi,@KartId,@Ad,@Soyad,@OgrenciNo,@OkulAdi,@BolumAdi,@Eposta,@Telefon,@KayitTarih,@AyrilisTarih)";
 
                 komut.Parameters.AddWithValue("@Uyetipi", Uyetipi.Text);
-                komut.Parameters.AddWithValue("@kartId", kartID.Text);
+                komut.Parameters.AddWithValue("@kartId", kartId.Text);
                 komut.Parameters.AddWithValue("@Ad", Ad.Text);
                 komut.Parameters.AddWithValue("@Soyad", Soyad.Text);
                 komut.Parameters.AddWithValue("@OgrenciNo", Ogrencino.Text);
@@ -77,7 +78,7 @@ namespace KutuphaneOtomasyonu
                 komut.CommandText = "update Uye set Uyetipi = @Uyetipi,kartId = @kartId ,Ad = @Ad,Soyad=@Soyad ,OgrenciNo=@OgrenciNo,OkulAdi=@Okuladi,BolumAdi=@BolumAdi,Eposta=@Eposta,Telefon=@Telefon,KayitTarih=@KayitTarih,AyrilisTarih=@AyrilisTarih where kartId=@kartId";
 
                 komut.Parameters.AddWithValue("@Uyetipi", Uyetipi.Text);
-                komut.Parameters.AddWithValue("@kartId", kartID.Text);
+                komut.Parameters.AddWithValue("@kartId", kartId.Text);
                 komut.Parameters.AddWithValue("@Ad", Ad.Text);
                 komut.Parameters.AddWithValue("@Soyad", Soyad.Text);
                 komut.Parameters.AddWithValue("@OgrenciNo", Ogrencino.Text);
@@ -160,7 +161,7 @@ namespace KutuphaneOtomasyonu
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Uyetipi.Text = dataGridView1.CurrentRow.Cells["Uyetipi"].Value.ToString();
-            kartID.Text = dataGridView1.CurrentRow.Cells["kartId"].Value.ToString();
+            kartId.Text = dataGridView1.CurrentRow.Cells["kartId"].Value.ToString();
             Ad.Text = dataGridView1.CurrentRow.Cells["Ad"].Value.ToString();
             Soyad.Text = dataGridView1.CurrentRow.Cells["Soyad"].Value.ToString();
             Telefon.Text = dataGridView1.CurrentRow.Cells["Telefon"].Value.ToString();
@@ -168,6 +169,8 @@ namespace KutuphaneOtomasyonu
             Ogrencino.Text = dataGridView1.CurrentRow.Cells["OgrenciNo"].Value.ToString();
             Okuladi.Text = dataGridView1.CurrentRow.Cells["OkulAdi"].Value.ToString();
             BolumAdi.Text = dataGridView1.CurrentRow.Cells["BolumAdi"].Value.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["KayitTarih"].Value);
+            dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["AyrilisTarih"].Value);
 
 
         }
