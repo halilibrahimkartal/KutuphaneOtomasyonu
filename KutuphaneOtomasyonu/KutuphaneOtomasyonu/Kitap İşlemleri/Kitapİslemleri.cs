@@ -13,10 +13,12 @@ namespace KutuphaneOtomasyonu
 {
     public partial class Kitapİslemleri : Form
     {
-        private Database db = new Database();
+        MySqlConnection con;
+        private Database baglanti = new Database();
         public Kitapİslemleri()
         {
             InitializeComponent();
+            con = new MySqlConnection("server=172.21.54.3; user id =Beta; pwd=Ulas&Hll.2022; database=Beta");
         }
 
         private void Kitapİslemleri_Load(object sender, EventArgs e)
@@ -28,9 +30,9 @@ namespace KutuphaneOtomasyonu
         {
             try
             {
-                db.Open();
-                var komut = db.Command();
-                komut.CommandText = "insert into Kitaplar(DemirbasNo,KitapId,ISBN,Barkod,KitapAdi,YazarAd,YazarSoyad,Dil,Yayinevi,Yayinyili,CevirmenAd,CevirmenSoyad,SayfaSayisi,Adet,BaskiYili,BaskiNo,Kategori,KategoriId,DolapNo,RafNo) values (@DemirbasNo,@KitapId,@ISBN,@Barkod,@KitapAdi,@YazarAd,@YazarSoyad,@Dil,@Yayinevi,@Yayinyili,@CevirmenAd,@CevirmenSoyad,@SayfaSayisi,@Adet,@BaskiYili,@BaskiNo,@Kategori,@KategoriId,@DolapNo,@RafNo)";
+                baglanti.Open();
+                var komut = baglanti.Command();
+                komut.CommandText = "insert into Kitaplar1(DemirbasNo,KitapId,ISBN,Barkod,KitapAdi,YazarAd,YazarSoyad,Dil,Yayinevi,Yayinyili,CevirmenAd,CevirmenSoyad,SayfaSayisi,Adet,BaskiYili,BaskiNo,Kategori,KategoriId,DolapNo,RafNo) values (@DemirbasNo,@KitapId,@ISBN,@Barkod,@KitapAdi,@YazarAd,@YazarSoyad,@Dil,@Yayinevi,@Yayinyili,@CevirmenAd,@CevirmenSoyad,@SayfaSayisi,@Adet,@BaskiYili,@BaskiNo,@Kategori,@KategoriId,@DolapNo,@RafNo)";
 
                 komut.Parameters.AddWithValue("@DemirbasNo", Demirbasno.Text);
                 komut.Parameters.AddWithValue("@KitapId", kitapID.Text);
@@ -66,11 +68,11 @@ namespace KutuphaneOtomasyonu
         private void button2_Click(object sender, EventArgs e)
         {
 
-            db.Open();
+            baglanti.Open();
             try
             {
-                var komut = db.Command();
-                komut.CommandText = "delete from Kitaplar where KitapId = @KitapId";
+                var komut = baglanti.Command();
+                komut.CommandText = "delete from Kitaplar1 where KitapId = @KitapId";
                 komut.Parameters.AddWithValue("@KitapId", dataGridView1.CurrentRow.Cells["kitapId"].Value);
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Kitap silme işlemi başarılı.");
@@ -86,11 +88,11 @@ namespace KutuphaneOtomasyonu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            db.Open();
-            var komut = db.Command();
+            baglanti.Open();
+            var komut = baglanti.Command();
             try
             {
-                komut.CommandText = "update Kitaplar set DemirbasNo=@DemirbasNo,KitapId=@KitapId,ISBN=@ISBN,Barkod=@Barkod,KitapAdi=@KitapAdi,YazarAd=@YazarAd,YazarSoyad=@YazarSoyad,Dil=@Dil,Yayinevi=@Yayinevi,Yayinyili=@Yayinyili,CevirmenAd=@CevirmenAd,CevirmenSoyad=@CevirmenSoyad,SayfaSayisi=@SayfaSayisi,Adet=@Adet,BaskiYili=@BaskiYili,BaskiNo=@BaskiNo,Kategori=@Kategori,KategoriId=@KategoriId,DolapNo=@DolapNo,RafNo=@RafNo where ISBN=@ISBN";
+                komut.CommandText = "update Kitaplar1 set DemirbasNo=@DemirbasNo,KitapId=@KitapId,ISBN=@ISBN,Barkod=@Barkod,KitapAdi=@KitapAdi,YazarAd=@YazarAd,YazarSoyad=@YazarSoyad,Dil=@Dil,Yayinevi=@Yayinevi,Yayinyili=@Yayinyili,CevirmenAd=@CevirmenAd,CevirmenSoyad=@CevirmenSoyad,SayfaSayisi=@SayfaSayisi,Adet=@Adet,BaskiYili=@BaskiYili,BaskiNo=@BaskiNo,Kategori=@Kategori,KategoriId=@KategoriId,DolapNo=@DolapNo,RafNo=@RafNo where ISBN=@ISBN";
 
                 komut.Parameters.AddWithValue("@DemirbasNo", Demirbasno.Text);
                 komut.Parameters.AddWithValue("@KitapId", kitapID.Text);
@@ -122,16 +124,16 @@ namespace KutuphaneOtomasyonu
                 string hata = string.Format("Kayıt silinirken bir hata oluştu.\n{0}", myEx.Message);
                 MessageBox.Show(hata);
             }
+            baglanti.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = true;
 
-            db.Open();
-            string command = @"select DemirbasNo,KitapId,ISBN,Barkod,KitapAdi,YazarAd,YazarSoyad,Dil,Yayinevi,Yayinyili,CevirmenAd,CevirmenSoyad,SayfaSayisi,Adet,BaskiYili,BaskiNo,Kategori,KategoriId,DolapNo,RafNo
-                 from Kitaplar";
-            var adapter = db.Adapter(command);
+            baglanti.Open();
+            string command = "select DemirbasNo,KitapId,ISBN,Barkod,KitapAdi,YazarAd,YazarSoyad,Dil,Yayinevi,Yayinyili,CevirmenAd,CevirmenSoyad,SayfaSayisi,Adet,BaskiYili,BaskiNo,Kategori,KategoriId,DolapNo,RafNo from Kitaplar1";
+            var adapter = baglanti.Adapter(command);
             try
             {
                 DataTable dt = new DataTable();
@@ -146,6 +148,7 @@ namespace KutuphaneOtomasyonu
                 MessageBox.Show(hata);
                 this.Close();
             }
+            baglanti.Close();
 
         }
        
@@ -175,9 +178,9 @@ namespace KutuphaneOtomasyonu
 
         private void kitaparama_TextChanged(object sender, EventArgs e)
         {
-            db.Open();
-            var komut = db.Command();
-            komut.CommandText= "select *from Kitaplar where KitapAdi like '" + kitaparama.Text+"'";
+             baglanti.Open();
+            var komut = baglanti.Command();
+            komut.CommandText= "select *from Kitaplar1 where KitapAdi like '" + kitaparama.Text+"'";
             MySqlDataReader read = komut.ExecuteReader();
             
       

@@ -10,29 +10,20 @@ namespace KutuphaneOtomasyonu
 {
     class Database
     {
-        private string server = "172.21.54.3";
-        private string user = "Beta";
-        private string password = "Ulas&Hll.2022";
-        private string database = "Beta";
+         //string server = "172.21.54.3";
+         //string user = "Beta";
+         //string password = "Ulas&Hll.2022";
+         //string database = "Beta";
 
-        private MySqlConnection baglanti;
+        MySqlConnection baglanti = new MySqlConnection("server=172.21.54.3; user id =Beta; pwd=Ulas&Hll.2022; database=Beta");
         private MySqlCommand komut;
         private MySqlDataReader reader;
         private MySqlDataAdapter adapter;
         public void Open()
         {
-            baglanti = new MySqlConnection("server=" + this.server + ";uid=" + this.user
-                + ";pwd=" + this.password + ";database=" + this.database);
-            try
-            {
+            if(baglanti.State != System.Data.ConnectionState.Open)
                 baglanti.Open();
-            }
-            catch (MySqlException myEx)
-            {
-
-                throw myEx;
-            }
-
+ 
         }
 
         internal MySqlDataReader ExecuteReader(string query)
@@ -42,15 +33,7 @@ namespace KutuphaneOtomasyonu
 
         public void Close()
         {
-            try
-            {
-                baglanti.Close();
-            }
-            catch (MySqlException myEx)
-            {
-
-                throw myEx;
-            }
+            baglanti.Close();
         }
         public MySqlCommand Command()
         {

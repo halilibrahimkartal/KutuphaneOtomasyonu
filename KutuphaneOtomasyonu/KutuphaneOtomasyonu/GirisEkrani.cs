@@ -3,29 +3,31 @@ using System.Data;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using KutuphaneOtomasyonu;
 
 namespace KutuphaneOtomasyonu
 {
     public partial class GirisEkrani : Form
     {
-        MySqlConnection db = new MySqlConnection();
+        MySqlConnection con;
+        Database baglanti = new Database();
 
         public GirisEkrani()
         {
             InitializeComponent();
+            con = new MySqlConnection("server=172.21.54.3; user id =Beta; pwd=Ulas&Hll.2022; database=Beta");
         }
 
         private void buttonGirisYap_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
                 
-                db.Open();
+                baglanti.Open();
                 
                 string mysql = "Select*From KullaniciAyarlari where KullaniciAdi=@Kullaniciadi AND Sifre=@sifre";
                 MySqlParameter prm1 = new MySqlParameter("Kullaniciadi", kullaniciAdiTextBox.Text.Trim());
                 MySqlParameter prm2 = new MySqlParameter("sifre", sifreTextBox.Text.Trim());
-                MySqlCommand komut = new MySqlCommand(mysql, db);
+                MySqlCommand komut = new MySqlCommand(mysql, con);
                 komut.Parameters.Add(prm1);
                 komut.Parameters.Add(prm2);
                 DataTable dt = new DataTable();
@@ -38,25 +40,27 @@ namespace KutuphaneOtomasyonu
                     this.Hide();
                     MessageBox.Show("Giriş Başarılı");
                 }
-            } 
-            catch (Exception)
-            {
-
-                MessageBox.Show("Hatalı Giriş");
+                else
+                {
+                    MessageBox.Show("Hatalı Giriş");
+                }
+            baglanti.Close();
+            
+           
 
                 
-            }       
+      
             
              
         }
 
-        private void girisYapmadanDevamEtButonu_Click(object sender, EventArgs e)
-        {
-            AnaEkran giris = new AnaEkran();
-            giris.Show();
-            this.Hide();
+        //private void girisYapmadanDevamEtButonu_Click(object sender, EventArgs e)
+        //{
+        //    AnaEkran giris = new AnaEkran();
+        //    giris.Show();
+        //    this.Hide();
             
-        }
+        //}
 
         
     }

@@ -127,7 +127,7 @@ namespace KutuphaneOtomasyonu
             this.girisYapmadanDevamEtButonu.TabIndex = 7;
             this.girisYapmadanDevamEtButonu.Text = "Giriş yapmadan devam et";
             this.girisYapmadanDevamEtButonu.UseVisualStyleBackColor = true;
-            this.girisYapmadanDevamEtButonu.Click += new System.EventHandler(this.girisYapmadanDevamEtButonu_Click);
+            
             // 
             // GirisEkrani
             // 
