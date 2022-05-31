@@ -169,8 +169,8 @@ namespace KutuphaneOtomasyonu
             Ogrencino.Text = dataGridView1.CurrentRow.Cells["OgrenciNo"].Value.ToString();
             Okuladi.Text = dataGridView1.CurrentRow.Cells["OkulAdi"].Value.ToString();
             BolumAdi.Text = dataGridView1.CurrentRow.Cells["BolumAdi"].Value.ToString();
-            dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["KayitTarih"].Value);
-            dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["AyrilisTarih"].Value);
+            //dateTimePicker1.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["KayitTarih"].Value);
+            //dateTimePicker2.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["AyrilisTarih"].Value);
 
 
         }

@@ -178,14 +178,16 @@ namespace KutuphaneOtomasyonu
 
         private void kitaparama_TextChanged(object sender, EventArgs e)
         {
-             baglanti.Open();
-            var komut = baglanti.Command();
-            komut.CommandText= "select *from Kitaplar1 where KitapAdi like '" + kitaparama.Text+"'";
-            MySqlDataReader read = komut.ExecuteReader();
             
-      
+            
+                baglanti.Open(); 
+            
+            var komut = baglanti.Command();
+            komut.CommandText= "select *from Kitaplar1 where KitapAdi like '"+kitaparama.Text+"'";
+            MySqlDataReader read = komut.ExecuteReader();
 
-            while (read.Read()) {
+            while (read.Read())
+            {
                 Demirbasno.Text = read["Demirbasno"].ToString();
                 kitapID.Text = read["kitapId"].ToString();
                 ISBN.Text = read["ISBN"].ToString();
@@ -209,6 +211,8 @@ namespace KutuphaneOtomasyonu
 
             }
             read.Close();
+
+
 
         }
     }

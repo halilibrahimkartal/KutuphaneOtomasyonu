@@ -15,11 +15,12 @@ namespace KutuphaneOtomasyonu
 
     {
 
-        
+        MySqlConnection con;
         private Database db = new Database();
         public Emanetİslemleri()
         {
             InitializeComponent();
+            con = new MySqlConnection("server=172.21.54.3; user id =Beta; pwd=Ulas&Hll.2022; database=Beta");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace KutuphaneOtomasyonu
 
             db.Open();
             string command = @"select kartId,ISBN,AlisTarihi,TeslimTarihi,emanetId,KitapAdi
-                 from Emanet";
+                 from Emanet1";
             var adapter = db.Adapter(command);
             try
             {
@@ -44,6 +45,7 @@ namespace KutuphaneOtomasyonu
                 MessageBox.Show(hata);
                 this.Close();
             }
+            db.Close();
         }
 
         private void Emanetİslemleri_Load(object sender, EventArgs e)
@@ -59,7 +61,7 @@ namespace KutuphaneOtomasyonu
             {
                 db.Open();
                 var komut = db.Command();
-                komut.CommandText = "insert into Emanet(ISBN,kartID,EmanetId,KitapAdi,AlisTarihi,TeslimTarihi) values (@ISBN,@kartId,@EmanetId@KitapAdi@AlisTarihi,@TeslimTarihi)";
+                komut.CommandText = "insert into Emanet1(ISBN,kartID,AlisTarihi,TeslimTarihi) values (@ISBN,@kartId,@AlisTarihi,@TeslimTarihi)";
 
                 komut.Parameters.AddWithValue("@ISBN", ISBN.Text);
                 komut.Parameters.AddWithValue("@kartId", KartID.Text);
@@ -72,7 +74,9 @@ namespace KutuphaneOtomasyonu
             {
                 string hata = string.Format("Kayıt veritabanına eklenirken bir hata oluştu.\n{0}", myEx.Message);
                 MessageBox.Show(hata);
+                
             }
+            db.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -81,7 +85,7 @@ namespace KutuphaneOtomasyonu
             var komut = db.Command();
             try
             {
-                komut.CommandText = "update Emanet set EmanetId=@EmanetId,KitapAdi=@KitapAdikartID=@kartId,ISBN=@ISBN,AlisTarihi=@AlisTarihi,TeslimTarihi=@TeslimTarihi where kartId=@kartId";
+                komut.CommandText = "update Emanet1 set kartID=@kartId,ISBN=@ISBN,AlisTarihi=@AlisTarihi,TeslimTarihi=@TeslimTarihi where kartId=@kartId";
                 
                 komut.Parameters.AddWithValue("@kartId", KartID.Text);
                 komut.Parameters.AddWithValue("@ISBN", ISBN.Text);               
@@ -97,6 +101,7 @@ namespace KutuphaneOtomasyonu
                 string hata = string.Format("Kayıt silinirken bir hata oluştu.\n{0}", myEx.Message);
                 MessageBox.Show(hata);
             }
+            db.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -115,7 +120,7 @@ namespace KutuphaneOtomasyonu
             try
             {
                 var komut = db.Command();
-                komut.CommandText = "delete from Emanet where kartId = @kartId";
+                komut.CommandText = "delete from Emanet1 where kartId = @kartId";
                 komut.Parameters.AddWithValue("@kartId", dataGridView1.CurrentRow.Cells["kartId"].Value);
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Üye kitabı teslim etti.");
@@ -126,6 +131,7 @@ namespace KutuphaneOtomasyonu
                 string hata = string.Format("Kayıt silinirken bir hata oluştu.\n{0}", myEx.Message);
                 MessageBox.Show(hata);
             }
+            db.Close();
         }
     }
 }
