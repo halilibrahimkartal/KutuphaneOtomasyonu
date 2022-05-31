@@ -54,14 +54,11 @@ namespace KutuphaneOtomasyonu
              
         }
 
-        //private void girisYapmadanDevamEtButonu_Click(object sender, EventArgs e)
-        //{
-        //    AnaEkran giris = new AnaEkran();
-        //    giris.Show();
-        //    this.Hide();
-            
-        //}
-
-        
+        private void girisYapmadanDevamEtButonu_Click(object sender, EventArgs e)
+        {
+            AnaEkran giris = new AnaEkran();
+            giris.Show();
+            this.Hide();
+        }
     }
 }

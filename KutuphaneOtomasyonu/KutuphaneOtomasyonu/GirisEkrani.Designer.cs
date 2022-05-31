@@ -127,7 +127,7 @@ namespace KutuphaneOtomasyonu
             this.girisYapmadanDevamEtButonu.TabIndex = 7;
             this.girisYapmadanDevamEtButonu.Text = "Giriş yapmadan devam et";
             this.girisYapmadanDevamEtButonu.UseVisualStyleBackColor = true;
-            
+            this.girisYapmadanDevamEtButonu.Click += new System.EventHandler(this.girisYapmadanDevamEtButonu_Click);
             // 
             // GirisEkrani
             // 
@@ -144,8 +144,8 @@ namespace KutuphaneOtomasyonu
             this.Controls.Add(this.kullaniciAdiTextBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GirisEkrani";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Ekranı";
-            //this.Load += new System.EventHandler(this.GirisEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

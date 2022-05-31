@@ -44,7 +44,7 @@ namespace KutuphaneOtomasyonu
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@ namespace KutuphaneOtomasyonu
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -191,12 +191,12 @@ namespace KutuphaneOtomasyonu
             this.comboBox1.Size = new System.Drawing.Size(200, 24);
             this.comboBox1.TabIndex = 2;
             // 
-            // textBox1
+            // textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBox.Location = new System.Drawing.Point(123, 12);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(200, 22);
+            this.textBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -236,7 +236,7 @@ namespace KutuphaneOtomasyonu
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
