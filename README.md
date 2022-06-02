@@ -6,7 +6,8 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 1) Uygulamım arayüzüne giriş yapma ekranı
 ### özellikler:
--Personelin sisteme giriş yapmasını sağlamak
+-Personelin sisteme giriş yapmasını sağlamak.
+-üyelerin sisteme giriş yapmasını sağlamak.
 <br>
 ![girişekranı](https://user-images.githubusercontent.com/101042211/171619772-d4210a9e-4036-4e4f-966d-09ce0c6fff34.png)
 <br>
@@ -14,24 +15,45 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 2) Uygulamanın ana ekranı
 ### özellikler:
+-Tüm işlemler ana ekran üzerindeki butonlardan ilerlemektedir.
+-Her işlem için ana formda bir pencere açılmaktadır.
+<br>
 ![Anaekran](https://user-images.githubusercontent.com/101042211/171619780-d0223e7c-be8a-4f35-99bb-c3dd63cd91d3.png)
 <br>
 <br>
 
 ## 3) Uygulamanın üye ekranı
 ### özellikler:
+-Öğrenci, Akademisyen ve Personel olarak kayıt alma.
+-Üye ekleme.
+-Üye silme.
+-Üye güncelleme.
+-Üye listeleme.
+<br>
 ![Üye](https://user-images.githubusercontent.com/101042211/171619899-3a993273-3998-41f5-ac4f-8e9bbcfead44.png)
 <br>
 <br>
 
 ## 4) Uygulamanın emanet ekranı
 ### özellikler:
+-Alınan tüm kitapların listesini tutma.
+-Ödünç verme ve teslim alma kayıtlarını tutma.
+-Emanet ekleme.
+-Emanet güncelleme.
+-Emanet listeleme.
+<br>
 ![emanet](https://user-images.githubusercontent.com/101042211/171619907-8333ab47-0e9b-48d2-8d66-27c19c38c8e2.png)
 <br>
 <br>
 
 ## 5) Uygulamanın kitap ekranı
 ### özellikler:
+-Kitap ekleme.
+-Kitap silme.
+-Kitap güncelleme.
+-Kitap listeleme.
+-Kitap araması yapma.
+<br>
 ![kitap](https://user-images.githubusercontent.com/101042211/171619917-2d61d725-4d18-4f01-9c53-410b8db437b5.png)
 <br>
 <br>
@@ -44,4 +66,9 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 7) Uygulamanın ayarlar ekranı
 ### özellikler:
+-Kullanıcı ekleme.
+-Kullanıcı silme.
+-Kullanıcı güncelleme.
+-Kullanıcı listeleme.
+<br>
 ![ayarlar](https://user-images.githubusercontent.com/101042211/171619933-7505e977-82fc-4ff4-b221-c6862734aec3.png)
