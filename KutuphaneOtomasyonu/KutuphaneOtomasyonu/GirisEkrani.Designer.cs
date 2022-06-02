@@ -74,6 +74,7 @@ namespace KutuphaneOtomasyonu
             this.kullaniciAdiTextBox.Name = "kullaniciAdiTextBox";
             this.kullaniciAdiTextBox.Size = new System.Drawing.Size(148, 22);
             this.kullaniciAdiTextBox.TabIndex = 3;
+            this.kullaniciAdiTextBox.Text = "admin";
             // 
             // sifreTextBox
             // 
@@ -86,6 +87,7 @@ namespace KutuphaneOtomasyonu
             this.sifreTextBox.Name = "sifreTextBox";
             this.sifreTextBox.Size = new System.Drawing.Size(148, 22);
             this.sifreTextBox.TabIndex = 4;
+            this.sifreTextBox.Text = "admin";
             // 
             // girisYapButonu
             // 
@@ -146,6 +148,7 @@ namespace KutuphaneOtomasyonu
             this.Name = "GirisEkrani";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Ekranı";
+            this.Load += new System.EventHandler(this.GirisEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

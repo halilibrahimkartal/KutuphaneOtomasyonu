@@ -38,7 +38,7 @@ namespace KutuphaneOtomasyonu
                     AnaEkran giris = new AnaEkran();
                     giris.Show();
                     this.Hide();
-                    MessageBox.Show("Giriş Başarılı");
+                   // MessageBox.Show("Giriş Başarılı");
                 }
                 else
                 {
@@ -59,6 +59,23 @@ namespace KutuphaneOtomasyonu
             AnaEkran giris = new AnaEkran();
             giris.Show();
             this.Hide();
+
+            giris.uyeIslemleriButonu.Visible = false;
+            giris.ayarlarButonu.Visible = false;
+            
+            
+
+            Kitapİslemleri kitap = new Kitapİslemleri();
+            kitap.button1.Visible = false;
+            kitap.button2.Visible = false;
+
+
+
+        }
+
+        private void GirisEkrani_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

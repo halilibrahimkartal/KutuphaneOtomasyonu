@@ -30,9 +30,10 @@ namespace KutuphaneOtomasyonu
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.emanetId = new System.Windows.Forms.TextBox();
+            this.KitapAdi = new System.Windows.Forms.TextBox();
+            this.teslimAlButonu = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ISBN = new System.Windows.Forms.TextBox();
@@ -43,19 +44,18 @@ namespace KutuphaneOtomasyonu
             this.KartID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.KitapAdi = new System.Windows.Forms.TextBox();
-            this.emanetId = new System.Windows.Forms.TextBox();
+            this.teslimAlindiTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.teslimAlindiTextBox);
             this.panel1.Controls.Add(this.emanetId);
             this.panel1.Controls.Add(this.KitapAdi);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.teslimAlButonu);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.ISBN);
@@ -71,35 +71,39 @@ namespace KutuphaneOtomasyonu
             this.panel1.Size = new System.Drawing.Size(1316, 143);
             this.panel1.TabIndex = 0;
             // 
-            // button4
+            // emanetId
             // 
-            this.button4.Location = new System.Drawing.Point(968, 38);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 46);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Güncelle";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.emanetId.Location = new System.Drawing.Point(1294, 3);
+            this.emanetId.Name = "emanetId";
+            this.emanetId.Size = new System.Drawing.Size(10, 22);
+            this.emanetId.TabIndex = 13;
+            // 
+            // KitapAdi
+            // 
+            this.KitapAdi.Location = new System.Drawing.Point(1303, 3);
+            this.KitapAdi.Name = "KitapAdi";
+            this.KitapAdi.Size = new System.Drawing.Size(10, 22);
+            this.KitapAdi.TabIndex = 12;
+            // 
+            // teslimAlButonu
+            // 
+            this.teslimAlButonu.Location = new System.Drawing.Point(824, 41);
+            this.teslimAlButonu.Name = "teslimAlButonu";
+            this.teslimAlButonu.Size = new System.Drawing.Size(125, 46);
+            this.teslimAlButonu.TabIndex = 11;
+            this.teslimAlButonu.Text = "Teslim al";
+            this.teslimAlButonu.UseVisualStyleBackColor = true;
+            this.teslimAlButonu.Click += new System.EventHandler(this.teslimAlButonu_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1118, 38);
+            this.button3.Location = new System.Drawing.Point(980, 41);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(125, 46);
             this.button3.TabIndex = 10;
             this.button3.Text = "Listele";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(818, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 46);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Teslim al";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dateTimePicker2
             // 
@@ -151,7 +155,7 @@ namespace KutuphaneOtomasyonu
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(668, 38);
+            this.button1.Location = new System.Drawing.Point(668, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 46);
             this.button1.TabIndex = 2;
@@ -187,19 +191,14 @@ namespace KutuphaneOtomasyonu
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // KitapAdi
+            // teslimAlindiTextBox
             // 
-            this.KitapAdi.Location = new System.Drawing.Point(1303, 3);
-            this.KitapAdi.Name = "KitapAdi";
-            this.KitapAdi.Size = new System.Drawing.Size(10, 22);
-            this.KitapAdi.TabIndex = 12;
-            // 
-            // emanetId
-            // 
-            this.emanetId.Location = new System.Drawing.Point(1294, 3);
-            this.emanetId.Name = "emanetId";
-            this.emanetId.Size = new System.Drawing.Size(10, 22);
-            this.emanetId.TabIndex = 13;
+            this.teslimAlindiTextBox.Location = new System.Drawing.Point(1145, 53);
+            this.teslimAlindiTextBox.Name = "teslimAlindiTextBox";
+            this.teslimAlindiTextBox.Size = new System.Drawing.Size(100, 22);
+            this.teslimAlindiTextBox.TabIndex = 16;
+            this.teslimAlindiTextBox.Text = "Teslim Alındı";
+            this.teslimAlindiTextBox.Visible = false;
             // 
             // Emanetİslemleri
             // 
@@ -210,6 +209,7 @@ namespace KutuphaneOtomasyonu
             this.Controls.Add(this.panel1);
             this.Name = "Emanetİslemleri";
             this.Text = "Emanetİslemleri";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Emanetİslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -221,9 +221,8 @@ namespace KutuphaneOtomasyonu
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button teslimAlButonu;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox ISBN;
@@ -236,5 +235,6 @@ namespace KutuphaneOtomasyonu
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox emanetId;
         private System.Windows.Forms.TextBox KitapAdi;
+        private System.Windows.Forms.TextBox teslimAlindiTextBox;
     }
 }

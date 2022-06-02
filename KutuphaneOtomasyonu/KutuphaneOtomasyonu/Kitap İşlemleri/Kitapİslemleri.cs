@@ -154,7 +154,7 @@ namespace KutuphaneOtomasyonu
        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Demirbasno.Text = dataGridView1.CurrentRow.Cells["Demirbasno"].Value.ToString();
+            Demirbasno.Text = dataGridView1.CurrentRow.Cells["DemirbasNo"].Value.ToString();
             kitapID.Text = dataGridView1.CurrentRow.Cells["kitapId"].Value.ToString();
             ISBN.Text = dataGridView1.CurrentRow.Cells["ISBN"].Value.ToString();
             Barkod.Text = dataGridView1.CurrentRow.Cells["Barkod"].Value.ToString();
@@ -180,52 +180,201 @@ namespace KutuphaneOtomasyonu
         {
 
 
-            con.Open(); 
-            
-           /* var komut = baglanti.Command();
-            komut.CommandText= "select *from Kitaplar1 where KitapAdi like '"+kitaparama.Text+"'";
-            MySqlDataReader read = komut.ExecuteReader();
-           */
+            //con.Open();
 
-           
+            /* var komut = baglanti.Command();
+             komut.CommandText= "select *from Kitaplar1 where KitapAdi like '"+kitaparama.Text+"'";
+             MySqlDataReader read = komut.ExecuteReader();
+            */
+
+
+            //MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where KitapAdi like'% " + kitaparama.Text + "%'", con);
+            //DataTable dt = new DataTable();
+            //adtr.Fill(dt);
+
+            //dataGridView1.DataSource = dt;
+            //con.Close();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where DemirbasNo like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where Barkod like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                con.Open();
                 MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where KitapAdi like'% " + kitaparama.Text + "%'", con);
                 DataTable dt = new DataTable();
                 adtr.Fill(dt);
                 dataGridView1.DataSource = dt;
-            con.Close();
-                if (kitaparama.Text == "")
-                {
-                    
+                con.Close();
+            }
 
-                }
-           
-          /*  while (read.Read())
+            else if (comboBox1.SelectedIndex == 3)
             {
-                Demirbasno.Text = read["Demirbasno"].ToString();
-                kitapID.Text = read["kitapId"].ToString();
-                ISBN.Text = read["ISBN"].ToString();
-                Barkod.Text = read["Barkod"].ToString();
-                kitapadı.Text = read["KitapAdi"].ToString();
-                yazarad.Text = read["YazarAd"].ToString();
-                yazarsoyad.Text = read["YazarSoyad"].ToString();
-                dil.Text = read["Dil"].ToString();
-                yayinevi.Text = read["Yayinevi"].ToString();
-                yayinyili.Text = read["YayinYili"].ToString();
-                cevirmenad.Text = read["CevirmenAd"].ToString();
-                cevirmensoyad.Text = read["CevirmenSoyad"].ToString();
-                sayfasayisi.Text = read["SayfaSayisi"].ToString();
-                adet.Text = read["Adet"].ToString();
-                baskiyili.Text = read["BaskiYili"].ToString();
-                baskino.Text = read["BaskiNo"].ToString();
-                kategori.Text = read["Kategori"].ToString();
-                kategorino.Text = read["KategoriId"].ToString();
-                dolapno.Text = read["DolapNo"].ToString();
-                rafno.Text = read["RafNo"].ToString();
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where YazarAd like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
 
-            }*/
+            else if (comboBox1.SelectedIndex == 4)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where YazarSoyad like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 5)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where Yayinevi like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 6)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where CevirmenAd like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 7)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where CevirmenSoyad like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 8)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where Kategori like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 9)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where KategoriId like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 10)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where DolapNo like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+            else if (comboBox1.SelectedIndex == 11)
+            {
+                con.Open();
+                MySqlDataAdapter adtr = new MySqlDataAdapter("select * from Kitaplar1 where RafNo like'% " + kitaparama.Text + "%'", con);
+                DataTable dt = new DataTable();
+                adtr.Fill(dt);
+                dataGridView1.DataSource = dt;
+                con.Close();
+            }
+
+           
+
+
+
 
 
 
         }
+        //if (kitaparama.Text == "")
+        //{
+
+
+        //}
+
+        //MySqlDataAdapter da = new MySqlDataAdapter("SELECT Kitap.,Kategori.,Tur.,Yazar.,YayinEvi.,Cevirmen. FROM Kitap RIGHT JOIN Kategori ON Kategori.ktgrId = Kitap.ktgrId RIGHT JOIN Tur ON Tur.turId = Kitap.turId RIGHT JOIN Yazar ON Yazar.yzrId = Kitap.yzrId RIGHT JOIN YayinEvi ON YayinEvi.yynevId = Kitap.yynevId RIGHT JOIN Cevirmen ON Cevirmen.cvrId = Kitap.cvrId where kitapId like '" + searchBox.Text + "%'", connection);
+
+
+        //DataTable dt = new DataTable();
+        //da.Fill(dt);
+
+        //dataGridView1.DataSource = dt;
+
+        //else if (comboBox1.SelectedIndex == 0)
+        //{
+        //con.Open();
+        //MySqlDataAdapter adtr1 = new MySqlDataAdapter("select * from Kitaplar1 where DemirbasNo like'% " + kitaparama.Text + "%'", con);
+        //DataTable dt = new DataTable();
+        //adtr1.Fill(dt);
+        //dataGridView1.DataSource = dt;
+        //}
+        //con.Close();
+
+
+        /*  while (read.Read())
+          {
+              Demirbasno.Text = read["Demirbasno"].ToString();
+              kitapID.Text = read["kitapId"].ToString();
+              ISBN.Text = read["ISBN"].ToString();
+              Barkod.Text = read["Barkod"].ToString();
+              kitapadı.Text = read["KitapAdi"].ToString();
+              yazarad.Text = read["YazarAd"].ToString();
+              yazarsoyad.Text = read["YazarSoyad"].ToString();
+              dil.Text = read["Dil"].ToString();
+              yayinevi.Text = read["Yayinevi"].ToString();
+              yayinyili.Text = read["YayinYili"].ToString();
+              cevirmenad.Text = read["CevirmenAd"].ToString();
+              cevirmensoyad.Text = read["CevirmenSoyad"].ToString();
+              sayfasayisi.Text = read["SayfaSayisi"].ToString();
+              adet.Text = read["Adet"].ToString();
+              baskiyili.Text = read["BaskiYili"].ToString();
+              baskino.Text = read["BaskiNo"].ToString();
+              kategori.Text = read["Kategori"].ToString();
+              kategorino.Text = read["KategoriId"].ToString();
+              dolapno.Text = read["DolapNo"].ToString();
+              rafno.Text = read["RafNo"].ToString();
+
+          }*/
+
+
+
     }
 }
+

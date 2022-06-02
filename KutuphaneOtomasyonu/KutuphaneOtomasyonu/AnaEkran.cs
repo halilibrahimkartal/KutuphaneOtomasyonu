@@ -18,14 +18,7 @@ namespace KutuphaneOtomasyonu
             this.IsMdiContainer = true;
         }
 
-        private void kurumBilgileriButonu_Click(object sender, EventArgs e)
-        {
-            KurumBilgileri kurumFormu = new KurumBilgileri();
-            kurumFormu.MdiParent = this;
-            kurumFormu.Show();
-           
-
-        }
+        
 
         private void uyeIslemleriButonu_Click(object sender, EventArgs e)
         {

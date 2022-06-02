@@ -28,8 +28,7 @@ namespace KutuphaneOtomasyonu
             dataGridView1.Visible = true;
 
             db.Open();
-            string command = @"select kartId,ISBN,AlisTarihi,TeslimTarihi,emanetId,KitapAdi
-                 from Emanet1";
+            string command = @"select emanetId,kartId,ISBN,KitapAdi,AlisTarihi,TeslimTarihi,EmanetinDurumu from Emanet1";
             var adapter = db.Adapter(command);
             try
             {
@@ -61,14 +60,15 @@ namespace KutuphaneOtomasyonu
             {
                 db.Open();
                 var komut = db.Command();
-                komut.CommandText = "insert into Emanet1(ISBN,kartID,AlisTarihi,TeslimTarihi) values (@ISBN,@kartId,@AlisTarihi,@TeslimTarihi)";
+                komut.CommandText = "insert into Emanet1(ISBN,kartID,AlisTarihi,TeslimTarihi,EmanetinDurumu) values (@ISBN,@kartId,@AlisTarihi,@TeslimTarihi,EmanetinDurumu)";
 
                 komut.Parameters.AddWithValue("@ISBN", ISBN.Text);
                 komut.Parameters.AddWithValue("@kartId", KartID.Text);
                 komut.Parameters.AddWithValue("@AlisTarihi", dateTimePicker1.Value);
                 komut.Parameters.AddWithValue("@TeslimTarihi", dateTimePicker2.Value);
+                komut.Parameters.AddWithValue("@EmanetinDurumu", teslimAlindiTextBox.Text);
                 komut.ExecuteNonQuery();
-                MessageBox.Show("X kaydı başarılı.");
+                MessageBox.Show("kayıt başarılı.");
             }
             catch (MySqlException myEx)
             {
@@ -79,18 +79,19 @@ namespace KutuphaneOtomasyonu
             db.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void teslimAlButonu_Click(object sender, EventArgs e)
         {
             db.Open();
             var komut = db.Command();
             try
             {
-                komut.CommandText = "update Emanet1 set kartID=@kartId,ISBN=@ISBN,AlisTarihi=@AlisTarihi,TeslimTarihi=@TeslimTarihi where kartId=@kartId";
+                komut.CommandText = "update Emanet1 set kartID=@kartId,ISBN=@ISBN,AlisTarihi=@AlisTarihi,TeslimTarihi=@TeslimTarihi,EmanetinDurumu=@EmanetinDurumu where kartId=@kartId";
                 
                 komut.Parameters.AddWithValue("@kartId", KartID.Text);
                 komut.Parameters.AddWithValue("@ISBN", ISBN.Text);               
                 komut.Parameters.AddWithValue("@AlisTarihi", dateTimePicker1.Value);
                 komut.Parameters.AddWithValue("@TeslimTarihi", dateTimePicker2.Value);
+                komut.Parameters.AddWithValue("@EmanetinDurumu", teslimAlindiTextBox.Text);
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Düzenleme başarılı.");
 
@@ -110,29 +111,12 @@ namespace KutuphaneOtomasyonu
             ISBN.Text = dataGridView1.CurrentRow.Cells["ISBN"].Value.ToString();
             emanetId.Text = dataGridView1.CurrentRow.Cells["emanetId"].Value.ToString();
             KitapAdi.Text = dataGridView1.CurrentRow.Cells["KitapAdi"].Value.ToString();
+            teslimAlindiTextBox.Text = dataGridView1.CurrentRow.Cells["EmanetinDurumu"].Value.ToString();
 
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            db.Open();
-            try
-            {
-                var komut = db.Command();
-                komut.CommandText = "delete from Emanet1 where kartId = @kartId";
-                komut.Parameters.AddWithValue("@kartId", dataGridView1.CurrentRow.Cells["kartId"].Value);
-                komut.ExecuteNonQuery();
-                MessageBox.Show("Üye kitabı teslim etti.");
-            }
-            catch (MySqlException myEx)
-            {
-
-                string hata = string.Format("Kayıt silinirken bir hata oluştu.\n{0}", myEx.Message);
-                MessageBox.Show(hata);
-            }
-            db.Close();
-        }
+        
     }
 }
 

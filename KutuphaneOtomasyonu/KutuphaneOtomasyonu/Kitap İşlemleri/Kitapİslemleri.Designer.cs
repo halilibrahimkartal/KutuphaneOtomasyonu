@@ -29,7 +29,10 @@ namespace KutuphaneOtomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kitapİslemleri));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.kitaparama = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -75,14 +78,17 @@ namespace KutuphaneOtomasyonu
             this.label1 = new System.Windows.Forms.Label();
             this.kitapadı = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kitaparama = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.kitaparama);
             this.panel1.Controls.Add(this.button4);
@@ -132,12 +138,30 @@ namespace KutuphaneOtomasyonu
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1336, 287);
+            this.panel1.Size = new System.Drawing.Size(1336, 351);
             this.panel1.TabIndex = 0;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(355, 302);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(145, 17);
+            this.label16.TabIndex = 49;
+            this.label16.Text = "Arama türünü seçiniz:";
+            // 
+            // kitaparama
+            // 
+            this.kitaparama.Location = new System.Drawing.Point(753, 299);
+            this.kitaparama.Multiline = true;
+            this.kitaparama.Name = "kitaparama";
+            this.kitaparama.Size = new System.Drawing.Size(269, 25);
+            this.kitaparama.TabIndex = 48;
+            this.kitaparama.TextChanged += new System.EventHandler(this.kitaparama_TextChanged);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1131, 197);
+            this.button4.Location = new System.Drawing.Point(1134, 198);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(155, 46);
             this.button4.TabIndex = 47;
@@ -147,7 +171,7 @@ namespace KutuphaneOtomasyonu
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1131, 140);
+            this.button3.Location = new System.Drawing.Point(1134, 140);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(155, 46);
             this.button3.TabIndex = 46;
@@ -157,7 +181,7 @@ namespace KutuphaneOtomasyonu
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1131, 83);
+            this.button2.Location = new System.Drawing.Point(1134, 83);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(155, 46);
             this.button2.TabIndex = 45;
@@ -167,7 +191,7 @@ namespace KutuphaneOtomasyonu
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1131, 26);
+            this.button1.Location = new System.Drawing.Point(1134, 26);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(155, 46);
             this.button1.TabIndex = 44;
@@ -254,7 +278,7 @@ namespace KutuphaneOtomasyonu
             // 
             // rafno
             // 
-            this.rafno.Location = new System.Drawing.Point(867, 244);
+            this.rafno.Location = new System.Drawing.Point(867, 247);
             this.rafno.Name = "rafno";
             this.rafno.Size = new System.Drawing.Size(155, 22);
             this.rafno.TabIndex = 32;
@@ -296,7 +320,7 @@ namespace KutuphaneOtomasyonu
             // 
             // adet
             // 
-            this.adet.Location = new System.Drawing.Point(525, 247);
+            this.adet.Location = new System.Drawing.Point(525, 250);
             this.adet.Name = "adet";
             this.adet.Size = new System.Drawing.Size(155, 22);
             this.adet.TabIndex = 26;
@@ -311,7 +335,7 @@ namespace KutuphaneOtomasyonu
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(807, 247);
+            this.label22.Location = new System.Drawing.Point(807, 250);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(54, 17);
             this.label22.TabIndex = 22;
@@ -338,7 +362,7 @@ namespace KutuphaneOtomasyonu
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(483, 250);
+            this.label19.Location = new System.Drawing.Point(483, 253);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(41, 17);
             this.label19.TabIndex = 19;
@@ -499,30 +523,44 @@ namespace KutuphaneOtomasyonu
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 287);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 351);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1336, 446);
+            this.dataGridView1.Size = new System.Drawing.Size(1336, 382);
             this.dataGridView1.TabIndex = 32;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // kitaparama
+            // comboBox1
             // 
-            this.kitaparama.Location = new System.Drawing.Point(129, 259);
-            this.kitaparama.Name = "kitaparama";
-            this.kitaparama.Size = new System.Drawing.Size(155, 22);
-            this.kitaparama.TabIndex = 48;
-            this.kitaparama.TextChanged += new System.EventHandler(this.kitaparama_TextChanged);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Demirbaş no",
+            "Barkod",
+            "Kitap adı",
+            "Yazar ad",
+            "Yazar soyad",
+            "Yayınevi",
+            "Çevirmen ad",
+            "Çevirmen soyad",
+            "Kategori ad",
+            "Kategori no",
+            "Dolap no",
+            "Raf no"});
+            this.comboBox1.Location = new System.Drawing.Point(506, 300);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(216, 24);
+            this.comboBox1.TabIndex = 50;
             // 
-            // label16
+            // pictureBox1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(11, 262);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(112, 17);
-            this.label16.TabIndex = 49;
-            this.label16.Text = "Kitap Adı Giriniz:";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(984, 300);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
             // 
             // Kitapİslemleri
             // 
@@ -533,10 +571,12 @@ namespace KutuphaneOtomasyonu
             this.Controls.Add(this.panel1);
             this.Name = "Kitapİslemleri";
             this.Text = "Kitapİslemleri";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Kitapİslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -584,12 +624,14 @@ namespace KutuphaneOtomasyonu
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox kitapadı;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox kitaparama;
+        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
