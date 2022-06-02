@@ -1,6 +1,6 @@
 # KutuphaneOtomasyonu
 
-Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistemleri Nyp2 dersinde verilen proje için yapılmıştır. 
+Bu Otomasyon Uludağ Üniversitesi, İnegöl İşletme Fakültesi, Yönetim Bilişim Sistemleri bölümü, Nesne Yönelimli Programlama 2 ve Veritabanı Yönetim Sistemleri dersinde verilen proje için yapılmıştır. 
  <br>
  <br>
 
