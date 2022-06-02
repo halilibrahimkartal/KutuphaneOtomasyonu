@@ -36,10 +36,10 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 4) Uygulamanın emanet ekranı
 ### özellikler:
--Alınan tüm kitapların listesini tutma.
--Ödünç verme ve teslim alma kayıtlarını tutma.
--Emanet ekleme.
--Emanet güncelleme.
+-Alınan tüm kitapların listesini tutma.<br>
+-Ödünç verme ve teslim alma kayıtlarını tutma.<br>
+-Emanet ekleme.<br>
+-Emanet güncelleme.<br>
 -Emanet listeleme.
 <br>
 ![emanet](https://user-images.githubusercontent.com/101042211/171619907-8333ab47-0e9b-48d2-8d66-27c19c38c8e2.png)
@@ -48,10 +48,10 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 5) Uygulamanın kitap ekranı
 ### özellikler:
--Kitap ekleme.
--Kitap silme.
--Kitap güncelleme.
--Kitap listeleme.
+-Kitap ekleme.<br>
+-Kitap silme.<br>
+-Kitap güncelleme.<br>
+-Kitap listeleme.<br>
 -Kitap araması yapma.
 <br>
 ![kitap](https://user-images.githubusercontent.com/101042211/171619917-2d61d725-4d18-4f01-9c53-410b8db437b5.png)
@@ -66,9 +66,9 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 7) Uygulamanın ayarlar ekranı
 ### özellikler:
--Kullanıcı ekleme.
--Kullanıcı silme.
--Kullanıcı güncelleme.
+-Kullanıcı ekleme.<br>
+-Kullanıcı silme.<br>
+-Kullanıcı güncelleme.<br>
 -Kullanıcı listeleme.
 <br>
 ![ayarlar](https://user-images.githubusercontent.com/101042211/171619933-7505e977-82fc-4ff4-b221-c6862734aec3.png)
