@@ -31,6 +31,8 @@ namespace KutuphaneOtomasyonu
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kitapİslemleri));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.kitaparama = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -78,11 +80,9 @@ namespace KutuphaneOtomasyonu
             this.label1 = new System.Windows.Forms.Label();
             this.kitapadı = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -140,6 +140,37 @@ namespace KutuphaneOtomasyonu
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1336, 351);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(984, 300);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Demirbas no",
+            "Barkod",
+            "Kitap adı",
+            "Yazar ad",
+            "Yazar soyad",
+            "Yayinevi",
+            "Çevirmen ad",
+            "Çevirmen soyad",
+            "Kategori ad",
+            "Kategori no",
+            "Dolap no",
+            "Raf no"});
+            this.comboBox1.Location = new System.Drawing.Point(506, 300);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(216, 24);
+            this.comboBox1.TabIndex = 50;
             // 
             // label16
             // 
@@ -531,37 +562,6 @@ namespace KutuphaneOtomasyonu
             this.dataGridView1.TabIndex = 32;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Demirbaş no",
-            "Barkod",
-            "Kitap adı",
-            "Yazar ad",
-            "Yazar soyad",
-            "Yayınevi",
-            "Çevirmen ad",
-            "Çevirmen soyad",
-            "Kategori ad",
-            "Kategori no",
-            "Dolap no",
-            "Raf no"});
-            this.comboBox1.Location = new System.Drawing.Point(506, 300);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 24);
-            this.comboBox1.TabIndex = 50;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(984, 300);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 51;
-            this.pictureBox1.TabStop = false;
-            // 
             // Kitapİslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -575,8 +575,8 @@ namespace KutuphaneOtomasyonu
             this.Load += new System.EventHandler(this.Kitapİslemleri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
