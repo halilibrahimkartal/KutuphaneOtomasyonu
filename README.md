@@ -6,7 +6,7 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 1) Uygulamım arayüzüne giriş yapma ekranı
 ### özellikler:
--Personelin sisteme giriş yapmasını sağlamak.
+-Personelin sisteme giriş yapmasını sağlamak.<br>
 -üyelerin sisteme giriş yapmasını sağlamak.
 <br>
 ![girişekranı](https://user-images.githubusercontent.com/101042211/171619772-d4210a9e-4036-4e4f-966d-09ce0c6fff34.png)
@@ -15,7 +15,7 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 2) Uygulamanın ana ekranı
 ### özellikler:
--Tüm işlemler ana ekran üzerindeki butonlardan ilerlemektedir.
+-Tüm işlemler ana ekran üzerindeki butonlardan ilerlemektedir.<br>
 -Her işlem için ana formda bir pencere açılmaktadır.
 <br>
 ![Anaekran](https://user-images.githubusercontent.com/101042211/171619780-d0223e7c-be8a-4f35-99bb-c3dd63cd91d3.png)
@@ -24,10 +24,10 @@ Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistem
 
 ## 3) Uygulamanın üye ekranı
 ### özellikler:
--Öğrenci, Akademisyen ve Personel olarak kayıt alma.
--Üye ekleme.
--Üye silme.
--Üye güncelleme.
+-Öğrenci, Akademisyen ve Personel olarak kayıt alma.<br>
+-Üye ekleme.<br>
+-Üye silme.<br>
+-Üye güncelleme.<br>
 -Üye listeleme.
 <br>
 ![Üye](https://user-images.githubusercontent.com/101042211/171619899-3a993273-3998-41f5-ac4f-8e9bbcfead44.png)
