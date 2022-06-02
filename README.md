@@ -1,7 +1,11 @@
 # KutuphaneOtomasyonu
 
-Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilşim
- 
+Bu Otomasyon Uludağ Üniversitesi İşletme Fakültesi Yönetim Bilişim Sistemleri Nyp2 dersinde verilen proje için yapılmıştır. 
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
 ![girişekranı](https://user-images.githubusercontent.com/101042211/171619772-d4210a9e-4036-4e4f-966d-09ce0c6fff34.png)
 ![Anaekran](https://user-images.githubusercontent.com/101042211/171619780-d0223e7c-be8a-4f35-99bb-c3dd63cd91d3.png)
 ![Üye](https://user-images.githubusercontent.com/101042211/171619899-3a993273-3998-41f5-ac4f-8e9bbcfead44.png)
